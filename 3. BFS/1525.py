@@ -9,7 +9,7 @@ for _ in range(3):
     temp = input().strip()
     temp = temp.replace(" ", "")
     a += temp
-a = a.replace("0", "9")
+a = int(a.replace("0", "9"))
 
 def bfs():
     q = deque()
