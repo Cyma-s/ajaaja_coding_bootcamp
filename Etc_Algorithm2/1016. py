@@ -1,0 +1,12 @@
+import sys
+input = sys.stdin.readline
+minl, maxl = map(int, input().split())
+squared = [i**2 for i in range(2,int(maxl**0.5)+1)]
+num = [1]*(maxl-minl+1)
+for i in squared:
+    n = minl//i*i
+    while n<maxl+1:
+        if n-minl>=0:
+            num[n-minl]=0
+        n+=i
+print(sum(num))
